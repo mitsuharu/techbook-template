@@ -1,9 +1,9 @@
 {
-  "name": "daigirin-template",
+  "name": "techbook-template",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:yumemi/daigirin-template.git",
-  "author": "YUMEMI Inc",
+  "repository": "git@github.com:mitsuharu/techbook-template.git",
+  "author": "Mitsuharu Emoto",
   "license": "MIT",
   "scripts": {
     "lint": "textlint ./book/manuscripts/",
@@ -22,5 +22,9 @@
     "textlint-rule-preset-ja-technical-writing": "^10.0.0",
     "textlint-rule-prh": "^6.0.0",
     "textlint-rule-spellcheck-tech-word": "^5.0.0"
-  }
+  },
+  "engines": {
+    "npm": "use yarn instead"
+  },
+  "packageManager": "yarn@4.4.0"
 }
