@@ -1,10 +1,10 @@
-# daigirin-template
+# techbook-template
 
 技術同人誌のテンプレートリポジトリです。新しい同人誌を作成するときは、このリポジトリを利用してください。
 
 ## PDFの生成方法
 
-```
+```shell
 make run
 ```
 
@@ -18,8 +18,8 @@ make run
 
 ## 原稿の追加方法
 
-* [book/manuscripts](book/manuscripts) ディレクトリの中に、拡張子 `.md` のMarkdownファイルを作成します。
-* [book/vivliostyle.config.js](book/vivliostyle.config.js) ファイル内の `entry` 配列に、そのMarkdownファイル名を追加します。
+* [book/manuscripts](book/manuscripts) ディレクトリの中に、拡張子 `.md` の Markdown ファイルを作成する
+* [book/vivliostyle.config.js](book/vivliostyle.config.js) ファイル内の `entry` 配列に、その Markdown ファイル名を追加する
 
 ## 文章校正
 
@@ -37,21 +37,20 @@ make run
   * WEB+DB 用語統一ルールベースの単語チェック
   * （deprecated になっているので置き換えたい）
 * Rules for TechBooster
-  * TechBooster の [ルール](https://github.com/TechBooster/ReVIEW-Template/tree/master/prh-rules) を使用しています。
+  * TechBooster の [ルール](https://github.com/TechBooster/ReVIEW-Template/tree/master/prh-rules) を利用している
   * iOS に関するルールはほとんどないので適宜追加してください。
 
 その他、スペルチェックのルール `textlint-rule-spellchecker` がありますが、エディターのスペルチェックと競合しやすいので、今回は追加していません。VS Code を利用している場合は、プラグイン [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) を追加すれば、スペルチェックが行われます。
 
 ### ローカル環境で実行する
 
-```
+```shell
 make lint
 ```
 
 ### VS Code + Docker で実行する
 
 VS Code にプラグイン [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) を追加します。コマンドパレット（ショートカットキー Command + Shift + P）を開いて、`Remote-Containers: Reopen in Container` を実行します。コンテナーが立ち上がったら、執筆を始めてください。ファイル保存時に textlint が自動実行されます。
-
 
 ### 無効
 
@@ -71,23 +70,33 @@ textlint を無効にしたい文章をここに書く
 
 ### 準備
 
-次のコマンドで、ビルドに必要なツールをローカル環境にインストールします。
+次のコマンドで、ビルドに必要なツールをローカル環境にインストールする。
 
-```
+```shell
 npm install
 ```
 
-プレス版の PDF をビルドするには、Ghostscript も必要になります。次のコマンドでインストールします。
+yarn v4 を利用するので corepack を有効化する。
 
+```shell
+corepack enable
 ```
+
+プレス版の PDF をビルドに必要な Ghostscript は、次のコマンドでインストールする。
+
+```shell
 brew install ghostscript
 ```
 
 ### 実行
 
-- `npm run start` : pdfを生成して開く（`make run` 相当）
-- `npm run lint` : textlintを実行（`make lint` 相当）
-- `npm run build` : pdfを生成（`make pdf` 相当）
-- `npm run build:press` : プレス版のpdfを生成（`make pdf_press` 相当）
-- `npm run open` : pdfを開く（`make open` 相当）
-- `npm run clean` : 生成ファイルをすべて削除（`make clean` 相当）
+サポートするローカルコマンドです。
+
+| コマンド | 内容 |
+|:--|:--|
+| `yarn start` | pdf を生成して開く（`make run` 相当）|
+| `yarn lint` | textlint を実行（`make lint` 相当）|
+| `yarn build` | pdf を生成（`make pdf` 相当）|
+| `yarn build:press` | プレス版の pdf を生成（`make pdf_press` 相当）|
+| `yarn open` | pdf を開く（`make open` 相当）|
+| `yarn clean` | 生成ファイルをすべて削除（`make clean` 相当）|
