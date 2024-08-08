@@ -22,7 +22,7 @@
     "prh": {
       "rulePaths": [
         "./prh-rules/media/techbooster.yml",
-        "./prh-rules/media/yumemi-daigirin.yml"
+        "./prh-rules/media/my-techbook.yml"
       ]
     }
   }
