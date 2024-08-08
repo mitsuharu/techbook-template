@@ -1,5 +1,5 @@
 {
-	"name": "textlint for daigirin",
+	"name": "textlint for techbook",
 	"build": {
 		"context": "..",
 		"dockerfile": "../Dockerfile"

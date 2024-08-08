@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   lint:
@@ -7,7 +7,7 @@ services:
       dockerfile: DockerfileForDockerCompose
     image: ${TEXT_LINT_IMAGE_NAME}:${TEXT_LINT_IMAGE_TAG}
     volumes:
-      - .:/workspaces/daigirin-template
-      - /workspaces/daigirin-template/node_modules
-    working_dir: /workspaces/daigirin-template
+      - .:/workspaces/techbook-template
+      - /workspaces/techbook-template/node_modules
+    working_dir: /workspaces/techbook-template
     command: yarn lint
