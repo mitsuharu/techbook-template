@@ -9,6 +9,7 @@ class: exclude-hashira
 ## 目次
 
 1. [はじめに](preface.html)
-1. [留意事項](preface.html)
+1. [chapter_01](chapter_01.html)
+1. [著者紹介](authors.html)
 
 </nav>

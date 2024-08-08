@@ -13,6 +13,7 @@ module.exports = {
     // はじめに
     'preface.md',
     // 各章の原稿
+    'chapter_01.md',
     
     // 著者紹介
     'authors.md',
