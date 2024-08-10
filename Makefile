@@ -1,11 +1,11 @@
 # Environment variable
-
 MAKEFILE_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 MAKEFILE_PATH := $(MAKEFILE_DIR)/Makefile
 DOCKER_COMPOSE_PATH := $(MAKEFILE_DIR)/docker-compose.yml
 BOOK_DIR := $(MAKEFILE_DIR)/book
 OUTPUT_DIR := $(BOOK_DIR)/output
 BOOK_PATH := $(OUTPUT_DIR)/ebook.pdf
+BOOK_PRESS_PATH := $(OUTPUT_DIR)/press.pdf
 
 export TEXT_LINT_IMAGE_NAME=textlint
 export TEXT_LINT_IMAGE_TAG=latest
@@ -46,20 +46,29 @@ run: \
 	pdf \
 	open
 
+.PHONY: pdf
+## pdfを生成する
+pdf: \
+	build_pdf \
+	stop_colima
+
+.PHONY: press
+## プレス版のpdfを生成する
+press: \
+	build_pdf_press \
+	stop_colima
+
 .PHONY: lint
-## textlintを実行
+## textlintを実行する
 lint:
 	$(DOCKER_COMPOSE) run --rm lint
 
-.PHONY: pdf
-## pdfを生成
-pdf:
-	$(VIVLIOSTYLE_CLI) build \
-		--no-sandbox
+.PHONY: build_pdf
+build_pdf:
+	$(VIVLIOSTYLE_CLI) build
 
-.PHONY: pdf_press
-## プレス版のpdfを生成
-pdf_press:
+.PHONY: build_pdf_press
+build_pdf_press:
 	$(VIVLIOSTYLE_CLI) build \
 		--no-sandbox \
 		--press-ready \
@@ -127,6 +136,12 @@ install_colima:
 start_colima:
 	@if [ $$(colima status 2>&1 | grep -c "not running") -eq 1 ]; then \
 		colima start; \
+	fi
+
+.PHONY: stop_colima
+stop_colima:
+	@if [ $$(colima status 2>&1 | grep -c "is running") -eq 1 ]; then \
+		colima stop; \
 	fi
 
 .PHONY: prepare_docker
