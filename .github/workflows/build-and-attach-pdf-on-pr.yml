@@ -59,4 +59,4 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             :page_facing_up: PDFが生成されました (Artifact ID is ${{ steps.artifact-upload-step.outputs.artifact-id }})
-            [こちらからダウンロード](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts)
+            [こちらからダウンロード](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.artifact-upload-step.outputs.artifact-id }})
