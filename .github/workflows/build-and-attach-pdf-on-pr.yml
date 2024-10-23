@@ -47,7 +47,7 @@ jobs:
         id: artifact-upload-step
         with:
           name: "ebook-pdf-${{ github.run_id }}-${{ github.run_attempt }}"
-          path: "${{ $PDF_PATH }}"
+          path: "${{ env.PDF_PATH }}"
           if-no-files-found: error
 
       # PRにPDFのリンクを含むコメントを投稿または更新
