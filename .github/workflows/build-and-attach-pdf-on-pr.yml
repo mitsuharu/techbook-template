@@ -29,7 +29,8 @@ jobs:
       # PDFを作成する
       - name: make PDF
         run: |
-          yarn install
+          corepack enable
+          yarn install --frozen-lockfile
           yarn pdf
 
       # PDFが生成されたかどうかをチェックする
