@@ -3,7 +3,8 @@ class: content
 ---
 
 <div class="doc-header">
-  <h1>iOSにおける非同期型イベント駆動</h1>
+  <h1>chapter_01</h1>
+  <div class="doc-author">著者名など</div>
 </div>
 
 # タイトルです
