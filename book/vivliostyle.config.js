@@ -12,14 +12,14 @@ module.exports = {
     // 目次
     'index.md',
     // はじめに
-    'preface.md',
-    // 各章の原稿
-    'chapter_01.md',
+    'preface.md'
+    // // 各章の原稿
+    // 'chapter_01.md',
     
-    // 著者紹介
-    'authors.md',
-    // 奥付
-    'colophon.md'
+    // // 著者紹介
+    // 'authors.md',
+    // // 奥付
+    // 'colophon.md'
   ],
   entryContext: './manuscripts',
   output: [

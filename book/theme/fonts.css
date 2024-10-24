@@ -1,11 +1,13 @@
+/* --- Noto Sans JP の検証 --- */
+
 /* Webフォント */
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap'); */
 
 /* 相対パス */
-@font-face {
+/* @font-face {
     font-family: 'Noto Sans JP';
     src: url('./fonts/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf') format('truetype');
-}
+} */
 
 /* 絶対パス */
 /* @font-face {
@@ -13,7 +15,22 @@
     src: url('/Users/m_emoto/works/daigirin/techbook-template/book/theme/fonts/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf') format('truetype');
 } */
 
+/* --- YuseiMagic の検証（見た目の反映が分かりやすい）--- */
+
+/* 相対パス */
+@font-face {
+    font-family: 'YuseiMagic';
+    src: url('./fonts/Yusei_Magic/YuseiMagic-Regular.ttf') format('truetype');
+}
+
+/* 絶対パス */
+/* /Users から始まる絶対パスを指定する */
+/* @font-face {
+    font-family: 'YuseiMagic';
+    src: url('/Users/m_emoto/works/daigirin/techbook-template/book/theme/fonts/Yusei_Magic/YuseiMagic-Regular.ttf') format('truetype');
+} */
+
 /* 仮にすべてのフォントを変更する */
 * {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'YuseiMagic', sans-serif;
 } 
