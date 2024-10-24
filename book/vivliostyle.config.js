@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'ゆめみ大技林 '/*\'23'*/,
-  author: 'ゆめみ大技林製作委員会',
+  title: '技術同人誌テンプレート_title',
+  author: '技術同人誌テンプレート_author',
   language: 'ja',
   size: 'A5',
   theme: [
