@@ -2,7 +2,7 @@
 class: exclude-hashira
 ---
 
-# ゆめみ大技林 <!--'23-->
+# 技術同人誌テンプレート_title
 
 <nav id="toc" role="doc-toc">
 
