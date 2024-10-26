@@ -20,12 +20,11 @@ hoge {
 ※ Google Fonts は商用や印刷物に利用できます
 https://developers.google.com/fonts/faq?hl=ja
 
+※ VariableFont_wght.ttf はファイル１つで済むが、PDF に埋め込まれない
+
 */
 
-/* 
-Noto Sans Japanese https://fonts.google.com/noto/specimen/Noto+Sans+JP
-NotoSansJP-VariableFont_wght.ttf は１つで済むが、PDF に埋め込まれない
-*/
+/* Noto Sans Japanese https://fonts.google.com/noto/specimen/Noto+Sans+JP */
 @font-face {
     font-family: 'Noto Sans JP';
     src: url('./Noto_Sans_JP/static/NotoSansJP-Thin.ttf') format('truetype');
@@ -81,8 +80,19 @@ NotoSansJP-VariableFont_wght.ttf は１つで済むが、PDF に埋め込まれ�
     font-style: normal;
 }
 
-/* すべてのフォントを変更する */
-* {
-    font-family: 'Noto Sans JP', sans-serif;
+/* Noto Sans Mono https://fonts.google.com/noto/specimen/Noto+Sans+Mono */
+@font-face {
+    font-family: 'Noto Sans Mono';
+    src: url('./Noto_Sans_Mono/static/NotoSansMono-Regular.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
+}
+
+/* フォントを変更する */
+:root {
+    /* 本文のフォント */
+    --vs-font-family: 'Noto Sans JP', sans-serif;
+
+    /* 等幅フォント（コードブロックで利用される）のフォント */
+    --vs--monospace-font-family: 'Noto Sans Mono', 'Noto Sans JP', monospace;
 }
