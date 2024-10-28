@@ -1,6 +1,23 @@
 /**
 フォント設定用の CSS パッケージ
 
+フォントがビルド環境に依存しないように、文章全体のフォントを Noto San に設定します。
+
+@description
+個別箇所のフォントを変更したい場合は、その特定タグに対して設定してください
+
+```css
+.foo {
+  font-family: "Your Font", serif;
+  font-weight: 500;
+}
+```
+
+```md
+<span class="foo">フォントを適用したい文章</span>
+```
+
+@description
 theme オプションで CSS ファイルを指定する方法は、必要な外部ファイルの場所を解決できないです。
 そのため、フォントファイルを含めたローカルの package として、定義します。
 
@@ -12,7 +29,7 @@ theme オプションで CSS ファイルを指定する方法は、必要な外
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-hoge {
+bar {
   font-family: "Roboto", sans-serif;
 }
 ```
@@ -20,73 +37,13 @@ hoge {
 ※ Google Fonts は商用や印刷物に利用できます
 https://developers.google.com/fonts/faq?hl=ja
 
-※ VariableFont_wght.ttf はファイル１つで済むが、PDF に埋め込まれない
+※ VariableFont はファイル１つで済むが、PDF に埋め込まれない
 
 */
 
-/* Noto Sans Japanese https://fonts.google.com/noto/specimen/Noto+Sans+JP */
-@font-face {
-    font-family: 'Noto Sans JP';
-    src: url('./Noto_Sans_JP/static/NotoSansJP-Thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Sans JP';
-    src: url('./Noto_Sans_JP/static/NotoSansJP-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Sans JP';
-    src: url('./Noto_Sans_JP/static/NotoSansJP-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Sans JP';
-    src: url('./Noto_Sans_JP/static/NotoSansJP-Regular.ttf') format('truetype');
-    font-weight: 400; /* normal */
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Sans JP';
-    src: url('./Noto_Sans_JP/static/NotoSansJP-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Sans JP';
-    src: url('./Noto_Sans_JP/static/NotoSansJP-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Sans JP';
-    src: url('./Noto_Sans_JP/static/NotoSansJP-Bold.ttf') format('truetype');
-    font-weight: 700; /* bold */
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Sans JP';
-    src: url('./Noto_Sans_JP/static/NotoSansJP-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Sans JP';
-    src: url('./Noto_Sans_JP/static/NotoSansJP-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
-
-/* Noto Sans Mono https://fonts.google.com/noto/specimen/Noto+Sans+Mono */
-@font-face {
-    font-family: 'Noto Sans Mono';
-    src: url('./Noto_Sans_Mono/static/NotoSansMono-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+/* フォントの読み込み（読み込み数が多いので別ファイルで定義しました） */
+@import url(./noto-sans-jp.css); 
+@import url(./noto-sans-mono.css);
 
 /* フォントを変更する */
 :root {
