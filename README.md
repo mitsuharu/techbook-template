@@ -68,16 +68,32 @@ textlint を無効にしたい文章をここに書く
 
 ### 準備
 
-次のコマンドで、ビルドに必要なツールをローカル環境にインストールする。
-
-```shell
-npm install
-```
-
 yarn v4 を利用するので corepack を有効化する。
 
 ```shell
 corepack enable
+```
+
+また、corepack からインストールする。
+
+```shell
+% corepack use yarn@4.5.1
+% yarn set version stable
+```
+
+もし別の yarn が参照されたら、その yarn を削除する。
+
+```shell
+$ which yarn
+/Users/user/.anyenv/envs/ndenv/shims/yarn
+
+$ rm -rf /Users/user/.anyenv/envs/ndenv/shims/yarn
+```
+
+次のコマンドで、ビルドに必要なツールをローカル環境にインストールする。
+
+```shell
+yarn install
 ```
 
 プレス版の PDF をビルドに必要な Ghostscript は、次のコマンドでインストールする。
