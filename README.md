@@ -74,10 +74,10 @@ yarn v4 を利用するので corepack を有効化する。
 corepack enable
 ```
 
-また、corepack からインストールする（そのときの最新バージョンを指定する）。
+または corepack からインストールする（そのときの最新バージョンを指定する）。Node.js のバージョンをあげた場合など、yarn がインストールされていないなどとトラブルになりやすい。nodenv を利用してる場合は、`nodenv rehash` やターミナルの再起動を試してください。
 
 ```shell
-% corepack use yarn@4.5.1
+% corepack use yarn
 または
 % yarn set version stable
 ```
