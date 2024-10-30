@@ -74,20 +74,23 @@ yarn v4 を利用するので corepack を有効化する。
 corepack enable
 ```
 
-また、corepack からインストールする。
+また、corepack からインストールする（そのときの最新バージョンを指定する）。
 
 ```shell
 % corepack use yarn@4.5.1
+または
 % yarn set version stable
 ```
 
 もし別の yarn が参照されたら、その yarn を削除する。
 
 ```shell
-$ which yarn
+% yarn -v
+nodenv: yarn: command not found
+The `yarn' command exists in these Node versions:
+% which yarn
 /Users/user/.anyenv/envs/ndenv/shims/yarn
-
-$ rm -rf /Users/user/.anyenv/envs/ndenv/shims/yarn
+% rm -rf /Users/user/.anyenv/envs/ndenv/shims/yarn
 ```
 
 次のコマンドで、ビルドに必要なツールをローカル環境にインストールする。
