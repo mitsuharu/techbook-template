@@ -5,7 +5,8 @@ module.exports = {
   size: 'A5',
   theme: [
     'vivliostyle-theme-macneko-techbook',
-    'theme/theme.css'
+    'theme/fonts',
+    'theme/theme.css',
   ],
   entry: [
     // 目次
@@ -13,7 +14,7 @@ module.exports = {
     // はじめに
     'preface.md',
     // 各章の原稿
-    'chapter_01.md',
+    'sample_chapter.md',
     
     // 著者紹介
     'authors.md',
