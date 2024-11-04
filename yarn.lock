@@ -1024,7 +1024,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vivliostyle/cli@npm:^8.9.1":
+"@vivliostyle/cli@npm:^8.16.0":
   version: 8.16.0
   resolution: "@vivliostyle/cli@npm:8.16.0"
   dependencies:
@@ -7353,7 +7353,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "techbook-template@workspace:."
   dependencies:
-    "@vivliostyle/cli": "npm:^8.9.1"
+    "@vivliostyle/cli": "npm:^8.16.0"
     npm-run-all2: "npm:^6.0.0"
     textlint: "npm:^14.0.0"
     textlint-filter-rule-comments: "npm:^1.2.2"
