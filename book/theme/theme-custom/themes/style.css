@@ -1,0 +1,5 @@
+/* 改行しない */
+.no-break {
+    word-wrap: break-word;
+    white-space: nowrap;
+}

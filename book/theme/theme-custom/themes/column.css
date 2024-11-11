@@ -1,0 +1,39 @@
+/**
+ コラム欄
+ 
+ ```html
+ <div class="column-box">
+  <h2>コラムのタイトル</h2>
+  <p>コラムの本文</p>
+ </div>
+ ```
+ 
+ */
+
+/* コラム欄向けのフォント */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+.column-box {
+    padding: 12px 16px 12px 16px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+.column-box h2 {
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    font-size: 1.5em;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 500;
+}
+
+.column-box p {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: "Zen Kaku Gothic New", serif;
+    font-weight: 500;
+  }

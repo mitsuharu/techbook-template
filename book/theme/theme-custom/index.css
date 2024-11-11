@@ -1,0 +1,11 @@
+/* 大技林 */
+@import url(./themes/daigirin.css);
+
+/* 奥付け */
+@import url(./themes/colophon.css);
+
+/* コラム欄 */
+@import url(./themes/column.css);
+
+/* スタイル一般 */
+@import url(./themes/style.css);
