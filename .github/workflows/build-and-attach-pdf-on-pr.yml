@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4
         id: artifact-upload-step
         with:
-          name: "ebook-pdf-${{ github.run_id }}-${{ github.run_attempt }}"
+          name: "ebook-pdf"
           path: "${{ env.PDF_PATH }}"
           if-no-files-found: error
 
@@ -62,5 +62,5 @@ jobs:
           repository: ${{ github.repository }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            :page_facing_up: PDFが作成されました
-            [こちらからダウンロード](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.artifact-upload-step.outputs.artifact-id }})
+            :page_facing_up: PDF が作成されました
+            [こちらからダウンロードできます](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.artifact-upload-step.outputs.artifact-id }})
