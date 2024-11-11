@@ -8,16 +8,31 @@ class: exclude-hashira
 
 ## 技術同人誌テンプレート_title
 
-<!--2023年5月15日--> 初版
+2024年12月31日 初版
 
 ---
 
-* 発行 技術同人誌テンプレート_執筆者
-* 印刷 <!--日光企画-->
-* 連絡先 <!-- https://x.com/mitsuharu_e -->
+<div class="colophon-container">
+  <div class="colophon-row">
+    <div class="colophon-label">著者</div>
+    <div class="colophon-value">技術同人誌テンプレート_著者</div>
+  </div>
+  <div class="colophon-row">
+    <div class="colophon-label">製作</div>
+    <div class="colophon-value">技術同人誌テンプレート_製作</div>
+  </div>
+  <div class="colophon-row">
+    <div class="colophon-label">印刷</div>
+    <div class="colophon-value">技術同人誌テンプレート_印刷所</div>
+</div>
+  <div class="colophon-row">
+    <div class="colophon-label">連絡先</div>
+    <div class="colophon-value">技術同人誌テンプレート_連絡先</div>
+  </div>
+</div>
 
 ---
 
-© <!--2023--> 技術同人誌テンプレート_執筆者
+© 2024 技術同人誌テンプレート_執筆者
 
 </section>
