@@ -24,7 +24,7 @@ class: exclude-hashira
   <div class="colophon-row">
     <div class="colophon-label">印刷</div>
     <div class="colophon-value">技術同人誌テンプレート_印刷所</div>
-</div>
+  </div>
   <div class="colophon-row">
     <div class="colophon-label">連絡先</div>
     <div class="colophon-value">技術同人誌テンプレート_連絡先</div>
