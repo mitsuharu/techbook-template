@@ -113,7 +113,7 @@ brew install ghostscript
 |:--|:--|
 | `yarn start` | pdf を生成して開く（`make run` 相当）|
 | `yarn lint` | textlint を実行（`make lint` 相当）|
-| `yarn build` | pdf を生成（`make pdf` 相当）|
-| `yarn build:press` | プレス版の pdf を生成（`make pdf_press` 相当）|
+| `yarn build` | pdf を生成（`make build_pdf` 相当）|
+| `yarn build:press` | プレス版の pdf を生成（`make build_pdf_press` 相当）|
 | `yarn open` | pdf を開く（`make open` 相当）|
 | `yarn clean` | 生成ファイルをすべて削除（`make clean` 相当）|
