@@ -1,4 +1,4 @@
-# 「n版」や「m刷」など特定タグが push されると、
+# 「n版」または「n版m刷」の特定タグが push されると、
 # 電子版および印刷用 PDF を添付したリリースが作成します。
 
 name: Publish and Release PDF
@@ -7,7 +7,7 @@ on:
   push:
     tags:
       - '*版'
-      - '*刷'
+      - '*版*刷'
 
 permissions:
   contents: write
