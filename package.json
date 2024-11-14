@@ -7,10 +7,9 @@
   "license": "MIT",
   "scripts": {
     "lint": "textlint ./book/manuscripts/",
-    "start": "run-s build open",
-    "pdf": "run-s build",
-    "build": "cd ./book/ && vivliostyle build",
-    "build:press": "cd ./book/ && vivliostyle build --preflight press-ready-local --preflight-option gray-scale --style ./theme/theme-press.css --output ./output/press.pdf",
+    "start": "run-s pdf open",
+    "pdf": "cd ./book/ && vivliostyle build",
+    "press": "cd ./book/ && vivliostyle build --preflight press-ready-local --preflight-option gray-scale --style ./theme/theme-press.css --output ./output/press.pdf",
     "open": "open ./book/output/ebook.pdf",
     "clean": "rm -rf ./book/output/"
   },
