@@ -47,7 +47,7 @@ make run
   - TechBooster の [ルール](https://github.com/TechBooster/ReVIEW-Template/tree/master/prh-rules) を利用している
   - iOS に関するルールはほとんどないので適宜追加してください。
 
-その他、スペルチェックのルール `textlint-rule-spellchecker` がありますが、エディターのスペルチェックと競合しやすいので、今回は追加していません。
+その他、スペルチェックのルール `textlint-rule-spellchecker` がありますが、エディターのスペルチェックと競合しやすいので、今回は追加していません。checker` がありますが、エディターのスペルチェックと競合しやすいので、今回は追加していません。VS Code を利用している場合は、プラグイン [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) を追加すれば、スペルチェックが行われ
 
 ### ローカル環境で実行する
 
@@ -55,9 +55,9 @@ make run
 make lint
 ```
 
-### VS Code + ローカル Node.js を利用している場合
+### VS Code + Node.js で実行する
 
-プラグイン [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) を追加すれば、執筆しながらスペルチェックが行われます。
+ローカルに Node.js 環境がある場合は、VS Code のプラグイン `taichi.vscode-textlint` を導入することで、ファイル保存時に textlint が実行されます。
 
 ### VS Code + Docker で実行する
 
