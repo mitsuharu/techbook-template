@@ -1,5 +1,5 @@
-import fs from "fs";
-import { PDFDocument } from "pdf-lib";
+const fs = require("fs");
+const { PDFDocument } = require("pdf-lib");
 
 /**
  * 本文 PDF に表紙画像を挿入するスクリプト
@@ -72,12 +72,7 @@ const insertImageAsFirstPage = async () => {
   fs.writeFileSync(outputPath, newPdfBytes);
 };
 
-
 // 表紙画像を挿入する
-try {
-  console.log(`It inserts cover image "${imagePath}" into "${pdfPath}".`);
-  await insertImageAsFirstPage()
-  console.log(`It succeeded to insert cover image and save to "${outputPath}".`);
-} catch (error) {
-  console.warn(error)
-}
+insertImageAsFirstPage().catch(err => {
+  console.warn(err.message);
+});
