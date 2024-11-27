@@ -21,26 +21,31 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Verify PR title and update Makefile
         run: |
-          # Check if PR title matches "Bump @vivliostyle/cli from X.X.X to X.X.X"
+          # 確認用ログ
+          echo "Current branch: $(git branch --show-current)"
+          echo "PR title: ${{ github.event.pull_request.title }}"
+
+          # PRタイトルが"@vivliostyle/cli"に一致するか確認
           if echo "${{ github.event.pull_request.title }}" | grep -q '^Bump @vivliostyle/cli from'; then
-            # Extract the new version from the PR title
+            # PRタイトルから新しいバージョンを抽出
             NEW_VERSION=$(echo "${{ github.event.pull_request.title }}" | grep -oP '(?<=to )\d+\.\d+\.\d+')
 
             if [ -n "$NEW_VERSION" ]; then
-              # Update the VIVLIOSTYLE_CLI_IMAGE_TAG in the Makefile
+              # Makefileの該当行を更新
               sed -i "s/^VIVLIOSTYLE_CLI_IMAGE_TAG := .*/VIVLIOSTYLE_CLI_IMAGE_TAG := $NEW_VERSION/" Makefile
 
-              # Commit and push the changes
+              # 変更をコミットしてプッシュ
               git config user.name "github-actions[bot]"
               git config user.email "github-actions[bot]@users.noreply.github.com"
               git add Makefile
               git commit -m "Update VIVLIOSTYLE_CLI_IMAGE_TAG to $NEW_VERSION"
-              git push
+              git push origin ${{ github.event.pull_request.head.ref }}
             else
               echo "Could not extract version from PR title"
               exit 1
