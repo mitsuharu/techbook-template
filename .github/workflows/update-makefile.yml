@@ -1,0 +1,48 @@
+name: Update Makefile for Vivliostyle CLI
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-makefile:
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify PR title and update Makefile
+        run: |
+          # Check if PR title matches "Bump @vivliostyle/cli from X.X.X to X.X.X"
+          if echo "${{ github.event.pull_request.title }}" | grep -q '^Bump @vivliostyle/cli from'; then
+            # Extract the new version from the PR title
+            NEW_VERSION=$(echo "${{ github.event.pull_request.title }}" | grep -oP '(?<=to )\d+\.\d+\.\d+')
+
+            if [ -n "$NEW_VERSION" ]; then
+              # Update the VIVLIOSTYLE_CLI_IMAGE_TAG in the Makefile
+              sed -i "s/^VIVLIOSTYLE_CLI_IMAGE_TAG := .*/VIVLIOSTYLE_CLI_IMAGE_TAG := $NEW_VERSION/" Makefile
+
+              # Commit and push the changes
+              git config user.name "github-actions[bot]"
+              git config user.email "github-actions[bot]@users.noreply.github.com"
+              git add Makefile
+              git commit -m "Update VIVLIOSTYLE_CLI_IMAGE_TAG to $NEW_VERSION"
+              git push
+            else
+              echo "Could not extract version from PR title"
+              exit 1
+            fi
+          else
+            echo "PR title does not match Vivliostyle CLI update format, skipping."
+            exit 0
+          fi
