@@ -119,6 +119,12 @@ brew install ghostscript
 brew install xpdf
 ```
 
+表紙画像を本文 PDF `book/output/ebook.pdf` に挿入する。ただし、表紙画像は `book/cover/cover.png` に限ります。表紙画像を挿入した PDF は `book/output/ebook_covered.pdf` に保存されます。
+
+```shell
+yarn cover
+```
+
 ## サポートするスクリプト
 
 | コマンド | 内容 |
@@ -129,3 +135,4 @@ brew install xpdf
 | `yarn press` | プレス版の pdf を生成（`make press` 相当）|
 | `yarn open` | pdf を開く（`make open` 相当）|
 | `yarn clean` | 生成ファイルをすべて削除（`make clean` 相当）|
+| `yarn cover` | 表紙画像を本文 PDF に挿入する |
