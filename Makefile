@@ -69,9 +69,7 @@ build_pdf:
 
 .PHONY: build_pdf_press
 build_pdf_press:
-	$(VIVLIOSTYLE_CLI) build \
-		--no-sandbox \
-		--config vivliostyle.config.press.docker.js
+	$(VIVLIOSTYLE_CLI) build --config vivliostyle.config.press.docker.js
 
 .PHONY: open
 ## pdfを開く
