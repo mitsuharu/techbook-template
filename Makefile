@@ -71,10 +71,7 @@ build_pdf:
 build_pdf_press:
 	$(VIVLIOSTYLE_CLI) build \
 		--no-sandbox \
-		--press-ready \
-		--preflight-option gray-scale \
-		--style ./theme/theme-press.css \
-		--output ./output/press.pdf
+		--config vivliostyle.config.press.docker.js
 
 .PHONY: open
 ## pdfを開く
