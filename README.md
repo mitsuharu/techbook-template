@@ -134,5 +134,6 @@ yarn cover
 | `yarn pdf` | pdf を生成（`make pdf` 相当）|
 | `yarn press` | プレス版の pdf を生成（`make press` 相当）|
 | `yarn open` | pdf を開く（`make open` 相当）|
+| `yarn cover` | pdf を開く（`make cover` 相当）|
 | `yarn clean` | 生成ファイルをすべて削除（`make clean` 相当）|
 | `yarn cover` | 表紙画像を本文 PDF に挿入する |
