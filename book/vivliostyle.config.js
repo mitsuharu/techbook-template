@@ -5,7 +5,7 @@ module.exports = {
   size: 'A5',
   theme: [
     'vivliostyle-theme-macneko-techbook',
-    "@mitsuharu/vivliostyle-theme-noto-sans-jp",
+    '@mitsuharu/vivliostyle-theme-noto-sans-jp',
     'theme/theme-custom',
   ],
   entry: [
@@ -15,16 +15,14 @@ module.exports = {
     'preface.md',
     // 各章の原稿
     'sample_chapter.md',
-    
+
     // 著者紹介
     'authors.md',
     // 奥付
-    'colophon.md'
+    'colophon.md',
   ],
   entryContext: './manuscripts',
-  output: [
-    'output/ebook.pdf',
-  ],
+  output: ['output/ebook.pdf'],
   workspaceDir: '.vivliostyle',
   toc: false,
   cover: undefined,
