@@ -1,4 +1,5 @@
 import js from '@eslint/js'
+import eslintConfigPrettier from 'eslint-config-prettier'
 
 export default [
   {
@@ -12,6 +13,7 @@ export default [
       'prh-rules/*',
       '.yarn/*',
     ],
-    files: ['scripts/*.{js,mjs,cjs,ts}'],
+    files: ['**/*.{js,mjs,ts}'],
+    ...eslintConfigPrettier, // 一番最後に書く
   },
 ]
