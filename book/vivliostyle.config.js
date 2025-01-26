@@ -4,8 +4,8 @@ module.exports = {
   language: 'ja',
   size: 'A5',
   theme: [
-    '@vivliostyle/theme-base@1.0.1',      // テーマが 2.0.0 に対応したら削除してください。
-    '@vivliostyle/theme-techbook@1.0.1',  // テーマが 2.0.0 に対応したら削除してください。
+    '@vivliostyle/theme-base@1.0.1', // テーマが 2.0.0 に対応したら削除してください。
+    '@vivliostyle/theme-techbook@1.0.1', // テーマが 2.0.0 に対応したら削除してください。
     'vivliostyle-theme-macneko-techbook@0.2.0',
     '@mitsuharu/vivliostyle-theme-noto-sans-jp@0.1.4',
     'theme/theme-custom',
@@ -17,16 +17,14 @@ module.exports = {
     'preface.md',
     // 各章の原稿
     'sample_chapter.md',
-    
+
     // 著者紹介
     'authors.md',
     // 奥付
-    'colophon.md'
+    'colophon.md',
   ],
   entryContext: './manuscripts',
-  output: [
-    'output/ebook.pdf',
-  ],
+  output: ['output/ebook.pdf'],
   workspaceDir: '.vivliostyle',
   toc: false,
   cover: undefined,
