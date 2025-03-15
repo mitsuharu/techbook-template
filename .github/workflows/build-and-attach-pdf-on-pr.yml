@@ -49,7 +49,7 @@ jobs:
       - name: make PDF
         run: |
           corepack enable
-          yarn install --immutable --immutable-cache
+          yarn install --immutable
           yarn pdf
 
       # PDFが生成されたかどうかをチェックする
