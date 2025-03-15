@@ -7,7 +7,7 @@ module.exports = {
     '@vivliostyle/theme-base@1.0.1', // テーマが 2.0.0 に対応したら削除してください。
     '@vivliostyle/theme-techbook@1.0.1', // テーマが 2.0.0 に対応したら削除してください。
     'vivliostyle-theme-macneko-techbook@0.2.0',
-    '@mitsuharu/vivliostyle-theme-noto-sans-jp@0.1.4',
+    '@mitsuharu/vivliostyle-theme-noto-sans-jp@0.1.3',
     'theme/theme-custom',
   ],
   entry: [
