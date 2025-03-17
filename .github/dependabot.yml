@@ -15,3 +15,10 @@ updates:
     open-pull-requests-limit: 10
     schedule: 
       interval: "monthly"
+    groups:
+      update-eslint:
+        patterns:
+          - "eslint|prettier"
+      update-textlint:
+        patterns:
+          - "textlint"
