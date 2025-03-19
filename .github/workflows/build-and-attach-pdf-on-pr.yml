@@ -35,7 +35,7 @@ jobs:
         run: |
           corepack enable
           yarn install --immutable
-          yarn pdf
+          make pdf
 
       # PDFが生成されたかどうかをチェックする
       - name: Check if PDF exists
