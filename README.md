@@ -137,3 +137,18 @@ yarn cover
 | `yarn cover` | pdf を開く（`make cover` 相当）|
 | `yarn clean` | 生成ファイルをすべて削除（`make clean` 相当）|
 | `yarn cover` | 表紙画像を本文 PDF に挿入する |
+
+## セキュリティ対策
+
+ローカルおよび CI で、[@aikidosec/safe-chain](https://github.com/AikidoSec/safe-chain) を利用して、npm パッケージの安全性を確認できます。
+
+### ローカル環境
+
+[@aikidosec/safe-chain](https://github.com/AikidoSec/safe-chain) の README にしたがって、ローカル環境にインストールしてください。なお、Docker を利用される場合は、安全確認したパッケージがインストールされるので原則的に対応不要です。
+
+### CI
+
+package.json またはロックファイルの変更を含む PR が作成されたら、GitHub Actions でパッケージが確認されます。なお、Actions で利用する`@aikidosec/safe-chain` はバージョン固定しています。`@aikidosec/safe-chain` が更新されたら、それ自身の安全性を確認した後に、次のファイルを更新してください。
+
+- `.github/workflows/aikidosec-safe-chain.yml`
+	- `name: Install safe-chain` の `export SAFE_CHAIN_VERSION=1.3.2` で指定するバージョンを更新する
