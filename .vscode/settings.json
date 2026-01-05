@@ -4,6 +4,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.words": [
+    "aikidosec",
     "baseservice",
     "Bitrise",
     "corepack",
@@ -17,6 +18,7 @@
     "Jetpack",
     "kantoku",
     "Keishin",
+    "lockfiles",
     "mitsuharu",
     "nodenv",
     "Qiita",
