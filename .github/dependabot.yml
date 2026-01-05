@@ -20,8 +20,12 @@ updates:
         patterns:
           - "textlint"
           - "textlint-*"
+    cooldown:
+      default-days: 7
   - package-ecosystem: "github-actions"
     directory: "/"
     open-pull-requests-limit: 10
     schedule: 
       interval: "monthly"
+    cooldown:
+      default-days: 7
