@@ -59,10 +59,12 @@ jobs:
       # PR に PDF のアーティファクトリンクを含むコメントを投稿する
       - name: Create PR Comment
         uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5.0.0
+        env:
+          # URLを変数に格納
+          ARTIFACT_URL: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.artifact-upload-step.outputs.artifact-id }}"
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            :page_facing_up: PDF が作成されました
-            [ダウンロード](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.artifact-upload-step.outputs.artifact-id }})
+            :page_facing_up: [PDF](${{ env.ARTIFACT_URL }}) が作成されました（別タブで開く場合は Ctrl+クリック）
