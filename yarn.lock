@@ -1221,14 +1221,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@textlint-ja/textlint-rule-preset-ai-writing@npm:^1.6.1":
-  version: 1.6.1
-  resolution: "@textlint-ja/textlint-rule-preset-ai-writing@npm:1.6.1"
+"@textlint-ja/textlint-rule-preset-ai-writing@npm:^1.6.3":
+  version: 1.6.3
+  resolution: "@textlint-ja/textlint-rule-preset-ai-writing@npm:1.6.3"
   dependencies:
     "@textlint/regexp-string-matcher": "npm:^2.0.2"
     kuromojin: "npm:^3.0.1"
     textlint-util-to-string: "npm:^3.3.4"
-  checksum: 10c0/32e85dcfb39595838770f429e5e34df185cc8db1ad98ba2d32f49e56d56073bb96faa29b3b893281c5eb442ee205eddad0c0c7d547bf06b559b19d94623533a4
+  checksum: 10c0/c63fcb2b9da09ac8eb5267646aac13bc354024ae532763b0a53a617caa53d6778d0f8b203bcf1147d02efcdddb356cef7efd9413fb7c0afa15e4e6b92af59fbd
   languageName: node
   linkType: hard
 
@@ -8652,7 +8652,7 @@ __metadata:
   resolution: "techbook-template@workspace:."
   dependencies:
     "@biomejs/biome": "npm:^2.4.4"
-    "@textlint-ja/textlint-rule-preset-ai-writing": "npm:^1.6.1"
+    "@textlint-ja/textlint-rule-preset-ai-writing": "npm:^1.6.3"
     "@vivliostyle/cli": "npm:10.3.1"
     pdf-lib: "npm:^1.17.1"
     textlint: "npm:15.5.1"
